@@ -214,9 +214,26 @@ ul{
             display: inline-block;
             margin-bottom: .5rem;
             margin-top: 1rem;
+            font-size: 14px;
         }
         
         label a {
             color: #007bff;
             background-color: transparent;
+        }
+        .register {
+            background-color: #0e1d52;
+            border: 1px solid #0e1d52;
+            color: #ffffff;
+            width: 30%;
+            font-size: 14px;
+            font-family: 'Lato', sans-serif;
+            padding: 15px 15px;
+            border-radius: 30px;
+            cursor: pointer;
+            float: none;
+            display: inline-block;
+        }
+        .registerButton{
+            margin-top: 5%;
         }
