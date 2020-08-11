@@ -8,14 +8,12 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
         <link rel="stylesheet" href="https://cdn.rawgit.com/tonystar/bootstrap-float-label/v3.0.1/dist/bootstrap-float-label.min.css"/>
       
       </head>
     <body>
-        <ul class="navbar">
+        <ul class="navbar navbar-fixed-top">
             <li>
                 <img src="../assets/logo.png">
             </li>
@@ -55,5 +53,71 @@
         </ul>
            </li>
         </ul>
-    </body>
+
+        <div class="register-content">
+            <div class="container" >
+               <div class="tab-details">
+                    <ul class="tab">
+                    <li class="col-xs-4 active">
+                        <button type="button" class="btn btnActive" id="btnActive">1</button>
+                        <button class="tablinks" onclick="openCity(event, 'PersonalDetails')" style="color: #00f999;">Personal Details</button>
+                    </li>
+                    <li class="col-xs-4">
+                        <button type="button" class="btn btnActive" id="btnUnActive">2</button>
+                        <button class="tablinks" onclick="openCity(event, 'CompanyDetails')">Company Details</button>
+                    </li>
+                    <li class="col-xs-4">
+                        <button type="button" class="btn btnActive" id="btnUnActive">3</button>
+                        <button class="tablinks" onclick="openCity(event,'ProductDetails')">Product/Opportunity</button>
+                    </li>
+                  </ul>
+                  
+                  <div id="PersonalDetails" class="tabcontent">
+                    <p> * Are you a tech displayer / scouter or general subscriber? Choose one.</p>
+                    <ul class="DisplayerScouter">
+                        <li class="active">
+                            <div class="">
+                                <img src="http://www.globaltechinterface.com/themes/gtifirstview/img/displayer.png">
+                                <span>
+                                    <a href="#">Displayer</a>
+                                </span>
+                            </div>
+                        </li>
+                        <div class="vl"></div>
+                        <li>
+                            <div class="">
+                                <img src="http://www.globaltechinterface.com/themes/gtifirstview/img/scouter.png">
+                                <span>
+                                    <a href="#">Scouter</a>
+                                </span>
+                            </div>
+                        </li>
+                        <div class="vl"></div>
+                        <li>
+                            <div class="">
+                                <img src="http://www.globaltechinterface.com/themes/gtifirstview/img/guest.png">
+                                <span>
+                                    <a href="#">General Subscriber</a>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                  </div>
+                  
+                  <div id="CompanyDetails" class="tabcontent">
+                    <h3>CompanyDetails</h3>
+                    <p>Paris is the capital of France.</p> 
+                  </div>
+                  
+                  <div id="ProductDetails" class="tabcontent">
+                    <h3>ProductDetails</h3>
+                    <p>Tokyo is the capital of Japan.</p>
+                  </div>
+               </div>
+            </div>
+        </div>
+
+        <script src="../js/Register.js"></script>
+        </body>
 </html>
