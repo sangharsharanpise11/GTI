@@ -149,7 +149,7 @@ ul{
     .DisplayerScouter a{
         font-size: 14px;
     }
-    a{
+   .DisplayerScouter a{
         color: grey  !important;
         text-decoration: none;
         background-color: transparent;
@@ -158,3 +158,65 @@ ul{
         border-left: 1px solid grey;
         height: 50px;
       }
+     .form{
+        width: 100%;
+        position: relative;
+        height: 70px;
+        overflow: hidden;
+     }
+     .form input{
+         width: 100%;
+         height: 100%;
+         padding-top: 20px;
+         border: none;
+         outline: none;
+     }
+     .content-name, .label-name{
+         font-size: 14px;
+         color: grey;
+     }
+     .form label{
+         position: absolute;
+         bottom: 0px;
+         left: 0%;
+         width: 100%;
+         height: 100%;
+         pointer-events: none;
+         border-bottom: 0.5px solid lightgrey;
+        }
+        .form label::after{
+            content: "";
+           position: absolute;
+           width: 100%; 
+           left: 0px;
+           bottom: -1px;
+           height: 100%;
+           border-bottom: 3px solid blue; 
+           transform: translateX(-100%);
+           transition:  all 0.3s ease;
+        }
+        .content-name{
+            position: absolute;
+            bottom: 5px;
+            left: 0px;
+            transition:  all 0.3s ease;
+        }
+        .form input:focus + .label-name .content-name,
+        .form input:valid + .label-name .content-name{
+            transform: translateY(-150%);
+            font-size: 14px;
+            /* color: blue; */
+        }
+        .form input:focus .label-name::after, .form input:valid + .label-name::after{
+            transform: translateX(0%);
+        }
+        label {
+            display: inline-block;
+            margin-bottom: .5rem;
+            margin-top: 1rem;
+        }
+        
+        label a {
+            color: #007bff;
+            background-color: transparent;
+        }
