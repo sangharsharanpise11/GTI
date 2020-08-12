@@ -57,7 +57,7 @@
         <div class="register-content">
             <div class="container" >
                <div class="tab-details">
-                    <ul class="tab">
+                 <ul class="tab">
                     <li class="col-xs-4 active">
                         <button type="button" class="btn btnActive" id="btnActive">1</button>
                         <button class="tablinks" onclick="openCity(event, 'PersonalDetails')" style="color: #00f999;">Personal Details</button>
@@ -70,7 +70,7 @@
                         <button type="button" class="btn btnActive" id="btnUnActive">3</button>
                         <button class="tablinks" onclick="openCity(event,'ProductDetails')">Product/Opportunity</button>
                     </li>
-                  </ul>
+                 </ul>
                   
                   <div id="PersonalDetails" class="tabcontent active">
                     <p> * Are you a tech displayer / scouter or general subscriber? Choose one.</p>
@@ -318,11 +318,74 @@
                         </div>
                        </div>
                     </div>
+               </div>
+            </div>
                   
-                  <div id="ProductDetails" class="tabcontent">
-                    <h3>ProductDetails</h3>
-                    <p>Tokyo is the capital of Japan.</p>
-                  </div>
+             <div id="ProductDetails" class="tabcontent">
+                <div class="uploadLogo">
+                    <p>Upload Product Image</p>
+                    <div class="">
+                        <img src="http://www.globaltechinterface.com/themes/gtifirstview/img/file-upload.png">
+                        <span>
+                            <a href="#">Upload Or click and drag</a>
+                        </span>
+                    </div>
+                </div>
+
+
+                <div class="input-group">
+                    <label for="companyInfo" class="label-name">* Product Name</label>
+                    <textarea id="companyInfo" class="box"></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label for="companyInfo" class="label-name">* Product Description</label>
+                    <textarea id="companyInfo" class="box"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">* Sector Type</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                      <option>Select your Sector</option>
+                      <option>America</option>
+                      <option>Australia</option>
+                      <option>India</option>
+                      <option>Japa</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">* Sub  Sector Type</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                      <option>Select your  Sub Sector</option>
+                      <option>America</option>
+                      <option>Australia</option>
+                      <option>India</option>
+                      <option>Japa</option>
+                    </select>
+                </div>
+
+                <div class="uploadLogo">
+                    <p>Upload Product PDF/Doc/Video/Audio</p>
+                    <div class="">
+                        <img src="http://www.globaltechinterface.com/themes/gtifirstview/img/file-upload.png">
+                        <span>
+                            <a href="#">Upload Or click and drag</a>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="multipleProducts">Display Multiple Products</div>
+                <div class="addMore">
+                    <span> + Add More Products / Opportunity</span> 
+                </div>
+
+                <div class="registerButton">
+                    <button type="submit" class="register">Complete</button>
+                </div>
+
+               </div>
+                  
                </div>
             </div>
         </div>

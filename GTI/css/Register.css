@@ -335,7 +335,8 @@ ul{
         .box:focus{
             outline: none;
         }
-        #CompanyDetails .input-group .label-name{
+        #CompanyDetails .input-group .label-name,  #ProductDetails .input-group .label-name{
+
             font-size: 14px;
             color: grey;
             position: absolute;
@@ -402,4 +403,16 @@ ul{
 #exampleFormControlSelect1{
     color: #999;
     font-size: 14px;
+}
+.multipleProducts{
+    color: grey;
+    margin-top: 2%;
+    font-size: 14px;
+    margin-bottom: 5%;
+}
+.addMore span{
+    border: 1px solid grey;
+       padding: 2%;
+        font-size: 14px;
+    color: grey;
 }
