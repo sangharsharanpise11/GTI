@@ -1,8 +1,9 @@
-body{
+body {
 margin:0;
 padding: 0;   
-background-color: #fafbfd;
-font-family: 'Lato', sans-serif !important;}
+background-color: #fafbfd !important;
+font-family: 'Lato', sans-serif !important;
+}
 
 .navbar {
   overflow: hidden;
@@ -397,4 +398,8 @@ ul{
     outline: none;
     border: none;
     border-bottom: 1px solid grey;
+}
+#exampleFormControlSelect1{
+    color: #999;
+    font-size: 14px;
 }
