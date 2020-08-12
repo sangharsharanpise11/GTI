@@ -1,4 +1,5 @@
-body {margin:0;
+body{
+margin:0;
 padding: 0;   
 background-color: #fafbfd;
 font-family: 'Lato', sans-serif !important;}
@@ -7,7 +8,7 @@ font-family: 'Lato', sans-serif !important;}
   overflow: hidden;
   border-bottom: 1px solid lightgray;
   position: fixed;
-  top: 0;
+  top: 0;background-color: white;
   width: 100%;
   justify-content: space-evenly;
   padding: 0.45rem 2rem !important;
@@ -66,9 +67,9 @@ ul{
       /* background-color: #f8f8f7; */
   }
   .register-content  .container{
-      height: fit-content;
-      background-color: WHITE;
-      margin-bottom: 5%;
+    height: fit-content;
+    background-color: WHITE;
+    padding-bottom: 5%;
   }
 
 .tab {
@@ -309,3 +310,91 @@ ul{
             color: #b6b6b6 !important;
             font-size: 14px;line-height: 0.5;font-weight: 500;
         }
+        .input-group{
+            position: relative;
+            margin: 30px 0;
+        }
+        .input-group .label{
+             position: absolute;
+             top: 0;
+             font-size: 14px;
+             margin: 10px;
+             padding: 0 10px;
+             cursor: text;
+             margin-bottom: 5%;
+           transition: top 0.2s ease-in-out;;   
+         }   
+         .box{
+             width: 100%;
+             padding: 5px 10px;
+             border: none;
+             border-bottom: 1px solid grey;
+             color: grey;
+         }     
+        .box:focus{
+            outline: none;
+        }
+        #CompanyDetails .input-group .label-name{
+            font-size: 14px;
+            color: grey;
+            position: absolute;
+            margin-top: 20px;
+        }
+        #companyInfo{
+                    height: 50px;
+        }
+.active{
+    top: -20px;
+}
+.requiredButtons li {
+    border-radius: 20px;
+    border: 1px solid grey;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 12px;
+    width: auto;
+    text-align: center;
+    margin-right: 2%;
+    display: inline-block;
+}
+.registerButton li::after{
+    content: "+";
+}
+.requiredButtons{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.TypeSizePartners label{
+    width: -webkit-fill-available;
+}
+.radioButtons{
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2%;
+}
+.nextAndSave{
+    display: flex;
+}
+.nextAndSave .registerButton {
+    width: 250px !important;
+}
+.next{
+    background-color: #0e1d52;
+    border: 1px solid white;
+    color: #ffffff;
+    width: 100%;
+    font-size: 14px;
+    font-family: 'Lato', sans-serif;
+    padding: 15px 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    float: none;
+    display: inline-block;
+}
+.form-group .form-control{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid grey;
+}

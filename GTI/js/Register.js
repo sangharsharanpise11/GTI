@@ -11,3 +11,13 @@ function openCity(evt, cityName) {
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
   }
+
+$(".box").on("focusin",function(){
+  $(this).parent().find("label").addClass("active");
+})
+
+$(".box").on("focusout",function(){
+  if(!this.value){
+    $(this).parent().find("label").removeClass("active");
+  }
+})
