@@ -430,3 +430,43 @@ ul{
 .signIn{
     width: 100px;
 }
+.signInModal{
+    height: 100%;
+    display: flex;
+}
+.image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-image: url("http://www.globaltechinterface.com/themes/gtifirstview/img/loginback.png");
+}
+.data{
+    width: 63%;padding: 5%;
+    display: flex;
+    flex-direction: column;
+    }
+    .forms{
+        width: 80%;
+        margin: auto;
+    }
+.modal-content{
+    height: 100%;
+}
+.modal-body{
+    height: 100%;
+    padding: 0 !important;
+}
+.modal-dialog {
+    max-width: 815px !important;
+    height: 400px;
+}
+.welcome{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5%;
+}
+.text2{
+    font-size: 25px;
+}
