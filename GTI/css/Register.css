@@ -470,3 +470,7 @@ ul{
 .text2{
     font-size: 25px;
 }
+h5{
+    font-size: 12px !important;
+    color: red;
+}
