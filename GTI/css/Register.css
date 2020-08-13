@@ -7,7 +7,6 @@ font-family: 'Lato', sans-serif !important;
 
 .navbar {
   overflow: hidden;
-  border-bottom: 1px solid lightgray;
   position: fixed;
   top: 0;background-color: white;
   width: 100%;
@@ -360,7 +359,7 @@ ul{
     display: inline-block;
 }
 .registerButton li::after{
-    content: "+";
+    content: "&times";
 }
 .requiredButtons{
     display: flex;
@@ -415,4 +414,19 @@ ul{
        padding: 2%;
         font-size: 14px;
     color: grey;
+}
+.modal{
+    z-index: 100;
+}
+.mainClass{
+    background: white;
+    border-bottom: 1px solid lightgrey;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    padding: 0px;
+    margin-bottom: 1%;
+}
+.signIn{
+    width: 100px;
 }
