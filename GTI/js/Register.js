@@ -259,6 +259,345 @@ $(document).ready(function(){
        alert("please fill the form correctly ...")
      }
   });
+
+
+// Company Details validations
+
+  $(".checkCompanyDes").hide();
+  $(".checkCompanyAddress").hide();
+  $(".checkCountry").hide();
+  $(".checkSector").hide();
+  $(".checkSubSector").hide();
+  $(".checkTypeSize").hide();
+  $(".checkStage").hide();
+  $(".checkTurnover").hide();
+
+  var companyDesc_err = true;
+  var companyAddress_err = true;
+  var country_err = true;
+  var sector_err = true;
+  var subSector_err = true;
+  var typeSize_err = true;
+  var stage_err =true;
+  var turnOver_err =true;
+
+  $("#companyInfo").keyup(function(){
+    companyInfoCheck();
+  });
+
+  $("#companyAddress").keyup(function(){
+    companyAddressCheck();
+  });
+
+  $("#exampleFormControlSelect1").keyup(function(){
+    countryCheck();
+  });
+
+  $("#exampleFormControlSelect2").keyup(function(){
+    sectorCheck();
+  });
+  $("#exampleFormControlSelect3").keyup(function(){
+    subSectorCheck();
+  });
+
+  $("#exampleFormControlSelect4").keyup(function(){
+    typeSizeCheck();
+  });
+
+ 
+
+  function companyInfoCheck(){
+    var pattern = /^[a-zA-Z. ]{3,3000}$/;
+    var companyInfo_val = $('#companyInfo').val();
+    if(! pattern.test(companyInfo_val) && companyInfo_val !== ''){
+      $('.checkCompanyDes').show();
+      $('.checkCompanyDes').html('** contain alphabets only');
+      $('.checkCompanyDes').focus();
+      $('.checkCompanyDes').css("color","red");
+      companyDesc_err = false;
+      return false;
+    }
+    else{
+      $('.checkCompanyDes').hide();
+    }
+    if(companyInfo_val.length == ''){
+      $('.checkCompanyDes').show();
+      $('.checkCompanyDes').html('** please fill company Description');
+      $('.checkCompanyDes').focus();
+      $('.checkCompanyDes').css("color","red");
+      companyDesc_err = false;
+      return false;
+    }
+    
+    else{
+      $('.checkCompanyDes').hide();
+    }
+  }
+
+  function companyAddressCheck(){
+    var pattern = /^[a-zA-Z.-]*$/;
+    var companyAddress_val = $('#companyAddress').val();
+    if(companyAddress_val.length == ''){
+      $('.checkCompanyAddress').show();
+      $('.checkCompanyAddress').html('** please fill address');
+      $('.checkCompanyAddress').focus();
+      $('.checkCompanyAddress').css("color","red");
+      companyAddress_err = false;
+      return false;
+    }
+    else{
+      $('.checkCompanyAddress').hide();
+    }
+
+    if(! pattern.test(companyAddress_val) && companyAddress_val !==''){
+      $('.checkCompanyAddress').show();
+      $('.checkCompanyAddress').html('** contain alphabets only');
+      $('.checkCompanyAddress').focus();
+      $('.checkCompanyAddress').css("color","red");
+      companyAddress_err = false;
+      return false;
+    }
+    else{
+      $('.checkCompanyAddress').hide();
+    }
+  }
+
+  
+  $("#next").click(function(){
+
+    const companyInfo_val = $('#companyInfo').val();
+    const companyAddress_val = $('#companyAddress').val();
+    
+     companyDesc_err = true;
+     companyAddress_err = true;
+
+     companyInfoCheck();
+     companyAddressCheck();
+     
+     var country=$("#exampleFormControlSelect1");
+     var sector=$("#exampleFormControlSelect2");
+     var subSector=$("#exampleFormControlSelect3");
+     var typeAndSize=$("#exampleFormControlSelect4");
+     var productStage=$("#exampleFormControlSelect5");
+     var turnOver=$("#exampleFormControlSelect6");
+
+     if(country.val() == -1){
+      $('.checkCountry').show();
+      $('.checkCountry').html('** please select the country');
+      $('.checkCountry').focus();
+      $('.checkCountry').css("color","red");
+      country_err = false;
+      return false;
+    }
+    else{
+      $('.checkCountry').hide();
+    }
+
+    if(sector.val() == -1){
+      $('.checkSector').show();
+      $('.checkSector').html('** please select the sector');
+      $('.checkSector').focus();
+      $('.checkSector').css("color","red");
+      sector_err = false;
+      return false;
+    }
+    else{
+      $('.checkSector').hide();
+    }
+    
+    if(subSector.val() == -1){
+      $('.checkSubSector').show();
+      $('.checkSubSector').html('** please select sub sector');
+      $('.checkSubSector').focus();
+      $('.checkSubSector').css("color","red");
+      subSector_err = false;
+      return false;
+    }
+    else{
+      $('.checkSubSector').hide();
+    }
+
+    if(typeAndSize.val() == -1){
+      $('.checkTypeSize').show();
+      $('.checkTypeSize').html('** please select typre and size');
+      $('.checkTypeSize').focus();
+      $('.checkTypeSize').css("color","red");
+      typeSize_err = false;
+      return false;
+    }
+    else{
+      $('.checkTypeSize').hide();
+    }
+    
+
+    if(productStage.val() == -1){
+      $('.checkStage').show();
+      $('.checkStage').html('** please select stage');
+      $('.checkStage').focus();
+      $('.checkStage').css("color","red");
+      stage_err = false;
+      return false;
+    }
+    else{
+      $('.checkStage').hide();
+    }
+
+    if(turnOver.val() == -1){
+      $('.checkTurnover').show();
+      $('.checkTurnover').html('** please select typre and size');
+      $('.checkTurnover').focus();
+      $('.checkTurnover').css("color","red");
+      turnOver_err = false;
+      return false;
+    }
+    else{
+      $('.checkTurnover').hide();
+    }
+     if(companyDesc_err === true && companyAddress_err === true ){
+       alert("go to product page ...")
+     }
+     else{
+       alert("please fill the form correctly ...")
+     }
+  });
+
+
+
+// product Details validations
+
+$(".checkProductName").hide();
+$(".checkProductDescription").hide();
+$(".checkSubSector").hide();
+$(".checkSector").hide();
+
+var productDesc_err = true;
+var productName_err = true;
+var subSector_err = true;
+var sector_err = true;
+
+
+$("#productName").keyup(function(){
+  productNameCheck();
+});
+
+$("#productdesc").keyup(function(){
+  productDescCheck();
+});
+
+
+
+
+function productNameCheck(){
+  var pattern = /^[a-zA-Z. ]{3,3000}$/;
+  var productName_val = $('#productName').val();
+  if(! pattern.test(productName_val) && productName_val !== ''){
+    $('.checkProductName').show();
+    $('.checkProductName').html('** contain alphabets only');
+    $('.checkProductName').focus();
+    $('.checkProductName').css("color","red");
+    companyDesc_err = false;
+    return false;
+  }
+  else{
+    $('.checkProductName').hide();
+  }
+  if(productName_val.length == ''){
+    $('.checkProductName').show();
+    $('.checkProductName').html('** please fill company Description');
+    $('.checkProductName').focus();
+    $('.checkProductName').css("color","red");
+    companyDesc_err = false;
+    return false;
+  }
+  
+  else{
+    $('.checkProductName').hide();
+  }
+}
+
+function   productDescCheck()
+{
+  var pattern = /^[a-zA-Z.-]*$/;
+  var productDesc_val = $('#productDesc').val();
+  if(companyAddress_val.length == ''){
+    $('.checkProductDescription').show();
+    $('.checkProductDescription').html('** please fill address');
+    $('.checkProductDescription').focus();
+    $('.checkProductDescription').css("color","red");
+    productDesc_err = false;
+    return false;
+  }
+  else{
+    $('.checkProductDescription').hide();
+  }
+
+  if(! pattern.test(productDesc_val) && productDesc_val !==''){
+    $('.checkProductDescription').show();
+    $('.checkProductDescription').html('** contain alphabets only');
+    $('.checkProductDescription').focus();
+    $('.checkProductDescription').css("color","red");
+    productDesc_err = false;
+    return false;
+  }
+  else{
+    $('.checkProductDescription').hide();
+  }
+}
+
+
+$("#complete").click(function(){
+
+  const productName = $('#productName').val();
+  const productDesc = $('#productDesc').val();
+  
+   companyDesc_err = true;
+   companyAddress_err = true;
+
+   companyInfoCheck();
+   companyAddressCheck();
+   
+
+   var sector1=$("#exampleFormControlSelect7");
+   var subSector1=$("#exampleFormControlSelect8");
+ 
+
+
+  if(sector1.val() == -1){
+    $('.checkSector').show();
+    $('.checkSector').html('** please select the sector');
+    $('.checkSector').focus();
+    $('.checkSector').css("color","red");
+    sector_err = false;
+    return false;
+  }
+  else{
+    $('.checkSector').hide();
+  }
+  
+  if(subSector1.val() == -1){
+    $('.checkSubSector').show();
+    $('.checkSubSector').html('** please select sub sector');
+    $('.checkSubSector').focus();
+    $('.checkSubSector').css("color","red");
+    subSector_err = false;
+    return false;
+  }
+  else{
+    $('.checkSubSector').hide();
+  }
+
+ 
+   if(companyDesc_err === true && companyAddress_err === true ){
+     alert("completed ...")
+   }
+   else{
+     alert("please fill the form correctly ...")
+   }
+});
+
+
+
+
 });
 
 

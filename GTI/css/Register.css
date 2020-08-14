@@ -19,7 +19,9 @@ img {
     border-style: none;
     height: 35px;
 }
-
+textarea{
+    margin-top: 20px ! important;
+}
 .SignUp{
     display: inline-block;
     font-weight: 300;
